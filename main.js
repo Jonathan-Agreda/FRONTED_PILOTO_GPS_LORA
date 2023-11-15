@@ -46,8 +46,8 @@ function inicializar () {
 
 function actualizar() {
     //alert("Actualizar pagina");
+    apiPanico();
     apiGps();
-    apiPanico()
 }
 
 function ubicar() {

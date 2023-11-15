@@ -86,7 +86,6 @@ button:hover {
 }
 
 .info-mapa {
-    /* border: 5px solid cadetblue; */
     grid-area: MAP;
     display: grid;
     place-content: center;
@@ -94,22 +93,15 @@ button:hover {
     height: 520;
     box-shadow: 5px 5px 5px #888;
 }
-.info-mapa iframe {
-    height: 55vh;
-    width: 70vw;
-}
-
 
 .info-gps-titulo, .info-panico-titulo {
     font-weight: bold;
     font-size: 15px;
     border: 1px solid cadetblue;
-    text-align: center;
-    text-justify: center;
+    text-align: start;
 }
 
 .info-gps-salida, .info-panico-salida {
     border: 1px solid cadetblue;
     text-align: center;
-    text-justify: center;
 }
