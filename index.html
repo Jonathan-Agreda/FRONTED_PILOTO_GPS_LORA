@@ -4,12 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRACKIoT</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
 </head>
 <body>
     <header>
         <h1>MONITOREO MEDIANTE LORA_A32 Y API TRACKIoT</h1>
     </header>
-    <main></main>
-    <footer></footer>
+
+    <main>
+        <section class="info-gps">
+            <p class="info-gps-title">GPS</p>
+            <label class="info-gps-titulo" for="bus-gps" >Bus</label>
+            <output class="info-gps-salida" id="bus-gps" >Bus</output>
+            <label class="info-gps-titulo" for="latitud-gps" >Latitud</label>
+            <output class="info-gps-salida" id="latitud-gps" >LA</output>
+            <label class="info-gps-titulo" for="longitud-gps" >Longitud</label>
+            <output class="info-gps-salida" id="longitud-gps" >LO</output>
+            <label class="info-gps-titulo" for="fecha-gps" >Fecha</label>
+            <output class="info-gps-salida" id="fecha-gps" >F</output>
+            <label class="info-gps-titulo" for="hora-gps" >Hora</label>
+            <output class="info-gps-salida" id="hora-gps" >H</output>
+            <label class="info-gps-titulo" for="velocidad-gps">Velocidad</label>
+            <output class="info-gps-salida" id="velocidad-gps" >V</output>
+        </section>
+
+        <button class="actualizar">Actualizar</button>
+        <button class="ubicar">Localizar</button>
+
+        <section class="info-panico">
+            <p class="info-panico-title">PANICO</p>
+            <label class="info-panico-titulo" for="bus-panico" >BUS</label>
+            <output class="info-panico-salida" id="bus-panico" >BUS</output>
+            <label class="info-panico-titulo" for="fecha-panico" >FECHA</label>
+            <output class="info-panico-salida" id="fecha-panico">FECHA</output>
+            <label class="info-panico-titulo" for="hora-panico" >HORA</label>
+            <output class="info-panico-salida" id="hora-panico" >HORA</output>
+            <label class="info-panico-titulo" for="boton-panico" >BOTON</label>
+            <output class="info-panico-salida" id="boton-panico" >BOTON</output>
+        </section>
+
+        <div id="map" class="info-mapa">
+        </div>
+    </main>
+    <script src="main.js"></script>
 </body>
 </html>

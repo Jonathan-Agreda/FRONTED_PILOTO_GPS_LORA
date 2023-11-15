@@ -1,0 +1,115 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+header {
+    margin: 0 auto;
+    background-color: rgb(144, 216, 218);
+    height: 20%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+main {
+    width: 10 vw;
+    margin: 0 auto;
+    height: 60%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(13, 36px);
+    grid-template-areas: 
+        "GPS GPS MAP MAP MAP MAP MAP MAP MAP MAP"
+        "GPS GPS MAP MAP MAP MAP MAP MAP MAP MAP"
+        "GPS GPS MAP MAP MAP MAP MAP MAP MAP MAP"
+        "GPS GPS MAP MAP MAP MAP MAP MAP MAP MAP"
+        "GPS GPS MAP MAP MAP MAP MAP MAP MAP MAP"
+        "GPS GPS MAP MAP MAP MAP MAP MAP MAP MAP"
+        "GPS GPS MAP MAP MAP MAP MAP MAP MAP MAP"
+        "BOTON UBICAR MAP MAP MAP MAP MAP MAP MAP MAP"
+        "PANICO PANICO MAP MAP MAP MAP MAP MAP MAP MAP"
+        "PANICO PANICO MAP MAP MAP MAP MAP MAP MAP MAP"
+        "PANICO PANICO MAP MAP MAP MAP MAP MAP MAP MAP"
+        "PANICO PANICO MAP MAP MAP MAP MAP MAP MAP MAP"
+        "PANICO PANICO MAP MAP MAP MAP MAP MAP MAP MAP";
+    place-content: center;
+    grid-gap: 5px;
+    background-image: url('./assets/fondo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.info-gps {
+    border: 5px solid cadetblue;
+    grid-area: GPS;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "TITLE TITLE";
+}
+
+.info-gps-title, .info-panico-title {
+    text-align: center;
+    text-justify: center;
+    font-weight: bold;
+    font-size: 25px;
+    grid-area: TITLE;
+}
+
+.actualizar {
+    grid-area: BOTON;
+}
+
+.ubicar {
+    grid-area: UBICAR;
+}
+
+button {
+    border: 5px solid cadetblue;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(144, 216, 218);
+}
+
+.info-panico {
+    border: 5px solid cadetblue;
+    grid-area: PANICO;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "TITLE TITLE";
+}
+
+.info-mapa {
+    /* border: 5px solid cadetblue; */
+    grid-area: MAP;
+    display: grid;
+    place-content: center;
+    width: 680;
+    height: 520;
+    box-shadow: 5px 5px 5px #888;
+}
+.info-mapa iframe {
+    height: 55vh;
+    width: 70vw;
+}
+
+
+.info-gps-titulo, .info-panico-titulo {
+    font-weight: bold;
+    font-size: 15px;
+    border: 1px solid cadetblue;
+    text-align: center;
+    text-justify: center;
+}
+
+.info-gps-salida, .info-panico-salida {
+    border: 1px solid cadetblue;
+    text-align: center;
+    text-justify: center;
+}
