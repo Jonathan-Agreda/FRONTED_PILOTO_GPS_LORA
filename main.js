@@ -16,7 +16,7 @@ const horaPanico = document.getElementById("hora-panico");
 const botonPanico = document.getElementById("boton-panico");
 
 let latitud = 0, longitud = 0;
-let map, Icono;
+let map, Icono, marcadorMapa;
 
 function inicializandoMapa(){
     map = L.map('map', {
@@ -41,7 +41,7 @@ function inicializar () {
     inicializandoMapa();
     botonActualizar.addEventListener("click", actualizar);
     botonUbicar.addEventListener("click", ubicar);
-
+    setInterval(actualizar,60000);  
 }
 
 function actualizar() {
@@ -72,6 +72,9 @@ async function apiGps () {
 }
 
 function pintarDatosGps(gps) {
+    if (marcadorMapa) {
+        marcadorMapa.remove(); // remover Marcador de mapa
+    }
     busGps.innerText = gps.bus;
     latitudGps.innerText = gps.latitud;
     longitudGps.innerText = gps.latitud;
@@ -80,7 +83,7 @@ function pintarDatosGps(gps) {
     velocidadGps.innerText = gps.velocidad;
     latitud = gps.latitud;
     longitud = gps.longitud;
-    L.marker([latitud, longitud],{title:gps.bus,draggable: false,opacity: 1,icon: Icono}).addTo(map);
+    marcadorMapa=L.marker([latitud, longitud],{title:gps.bus,draggable: false,opacity: 1,icon: Icono}).addTo(map);
     map.setView([latitud, longitud], 16);
 }
 
