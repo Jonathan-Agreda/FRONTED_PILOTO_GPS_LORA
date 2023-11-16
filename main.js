@@ -41,6 +41,7 @@ function inicializar () {
     inicializandoMapa();
     botonActualizar.addEventListener("click", actualizar);
     botonUbicar.addEventListener("click", ubicar);
+    setTimeout(actualizar,5000);
     setInterval(actualizar,60000);  
 }
 
