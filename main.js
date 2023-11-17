@@ -68,6 +68,7 @@ async function apiGps () {
             pintarDatosGps(jsonResponse.data[0]);
         }
     } catch (error) {
+        console.log("ERROR DE API GPS");
         console.log(error);        
     }
 }
@@ -96,6 +97,7 @@ async function apiPanico () {
             pintarDatosPanico(jsonResponse.data[0]);
         }
     } catch (error) {
+        console.log("ERROR DE API PANICO");
         console.log(error);        
     }
 }
