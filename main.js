@@ -1,5 +1,5 @@
-const apiGpsLora = "https://piloto-gps-lora.vercel.app/api/gps/1";
-const apiPanicoLora = "https://piloto-gps-lora.vercel.app/api/panico/1";
+const apiGpsLora = "http://135.148.148.73:3000/api/gps/1";
+const apiPanicoLora = "http://135.148.148.73:3000/api/panico/1";
 
 const botonActualizar = document.querySelector(".actualizar");
 const botonUbicar = document.querySelector(".ubicar");
