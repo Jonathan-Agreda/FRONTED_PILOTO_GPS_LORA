@@ -42,7 +42,7 @@ function inicializar () {
     botonActualizar.addEventListener("click", actualizar);
     botonUbicar.addEventListener("click", ubicar);
     setTimeout(actualizar,5000);
-    setInterval(actualizar,60000);  
+    setInterval(actualizar,20000);  
 }
 
 function actualizar() {
